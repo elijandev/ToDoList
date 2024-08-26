@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body{
+  direction: ltr;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+input , button{
+  font-family:  "Poppins", sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background: rgb(135,216,222);
+  background: linear-gradient(187deg, rgba(135,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noteBook{
+  max-width: 540px;
+  width: 100%;
+  background-color: #fff;
+  margin: 100px auto 50px;
+  padding: 40px 30px 50px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+.noteBook h2{
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: rgb(125, 209, 237);
+}
+.noteBook img{
+  width: 44px;
+}
+.row{
+  background-color: #e4e4e4;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+.row input{
+  font-size: 22px;
+  height: 45px;
+    border: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 0 10px;
+
+}
+.row button{
+  border: none;
+  background: linear-gradient(187deg, rgba(135,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 100%);
+  height: 45px;
+  padding: 0 22px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+.row button:hover{
+  cursor: pointer;
+  background: linear-gradient(10deg, rgba(135,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 80%);
+  }
+  .row button:active{
+    background: linear-gradient(180deg, rgba(235,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 60%);
+  }
+  ul{
+    margin-top: 20px;
+    height: 180px;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: none;
+    padding-left: 15px;
+ 
+  }
+  ul::-webkit-scrollbar {
+    width: 10px;
+  }
+  ul::-webkit-scrollbar-track {
+    background: #e4e4e4;
+    border-radius: 10px;
+  }
+  ul::-webkit-scrollbar-thumb {
+    background:  linear-gradient(10deg, rgba(135,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 80%);;
+    border-radius: 10px;
+   
+  }
+  ul::-webkit-scrollbar-thumb:hover {
+    background:  linear-gradient(260deg, rgba(135,216,222,1) 0%, rgba(106,126,228,0.8384615384615385) 0%, rgba(178,184,251,1) 80%);
+    cursor: pointer;
+    border-radius: 10px;
+
+  }
+  ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 4px 42px 4px 8px;
+    position: relative;
+    cursor: pointer;
+  }
+  ul li::before{
+    content: "";
+    position: absolute;
+    background-image: url(verifier.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    left: -15px;
+    top: 6px;
+  }
+  ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+
+  }
+  ul  li.checked::before{
+    background-image: url(case-a-cocher.png);
+  }
+  ul li span{
+    position: absolute;
+    right: 0;
+    height: 24px;
+    width:  24px;
+  }
